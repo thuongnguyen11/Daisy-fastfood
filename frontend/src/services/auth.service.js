@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth-header";
+import { API_URL } from "./api-url";
 
-const API_URL = "http://localhost:5000/api/v1/";
 
 const register = (name, phone_number, password) => {
     return axios.post(API_URL + 'users/', {
@@ -20,7 +20,6 @@ const login = (phone_number, password) => {
 };
 
 const logout = () => {
-    console.log(authHeader());
     return axios.post(API_URL + 'users/logoutall', {}, { headers: authHeader() });
 };
 
