@@ -49,7 +49,7 @@ const CartItem = ({ item, onUpdateItem }) => {
         <div className="flex items-center">
             <div className="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
                 <img
-                    src={item.images[0]}
+                    src={item.images ? item.images[0] : ''}
                     alt={item.name}
                     className="w-full h-full object-center object-cover"
                 />
@@ -70,7 +70,7 @@ const CartItem = ({ item, onUpdateItem }) => {
                     </div>
 
                     <div className="flex">
-                        <button type="button" className="font-medium text-indigo-600 hover:text-indigo-500" onClick={() => onRemoveItem()}>
+                        <button type="button" className="font-medium text-yellow-500 hover:text-yellow-400" onClick={() => onRemoveItem()}>
                             Remove
                         </button>
                     </div>
@@ -163,7 +163,7 @@ export default function Cart() {
         return <div className={classNames(items.length > 0 ? 'w-2/5' : 'w-full', 'h-full flex flex-col bg-white overflow-y-auto ')}>
             <div className="flex-1 overflow-y-auto px-4">
                 <div className="flex items-start justify-between">
-                    <div className="text-lg font-medium text-gray-900">Giỏ hàng</div>
+                    <div className="text-3xl font-medium text-gray-900">Giỏ hàng</div>
                 </div>
 
                 <div className="mt-8">
@@ -200,7 +200,7 @@ export default function Cart() {
                     enableReinitialize
                     onSubmit={onSumbit}>
                     <Form>
-                        <div className="text-lg font-medium text-gray-600 mb-12">Thông tin nhận hàng</div>
+                        <div className="text-3xl font-medium text-gray-900 mb-12">Thông tin nhận hàng</div>
                         <div className="w-full bg-gray-100 rounded px-4 divide-y divide-gray-300">
                             <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:py-5">
                                 <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
@@ -303,7 +303,7 @@ export default function Cart() {
                             <div className="pb-4">
                                 <div className="flex flex-row justify-between py-8">
                                     <div className="text-base font-medium text-gray-900">Thành tiền</div>
-                                    <div className="text-base font-medium text-gray-900">{humanziePrice(total)}</div>
+                                    <div className="text-2xl font-medium text-yellow-500 ">{humanziePrice(total)}</div>
                                 </div>
                                 <p className="mt-0.5 text-sm text-gray-500 flex flex-row gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -313,7 +313,7 @@ export default function Cart() {
                                 <div className="mt-6 w-100 text-center ">
                                     <button
                                         type="submit"
-                                        className="px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                                        className="px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-700 bg-yellow-400 hover:bg-yellow-500"
                                     >
                                         Tiến hành đặt hàng
                                     </button>
