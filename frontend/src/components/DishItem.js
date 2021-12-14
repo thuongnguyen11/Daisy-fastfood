@@ -5,18 +5,18 @@ export default function DishItem({ dish }) {
     return (
         <NavLink to={`dishes/${dish.id}`}>
             <div key={dish.id} className="group relative">
-                <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-t-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
                     <img
                         src={dish.images[0]}
                         alt={dish.name}
                         className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                     />
                 </div>
-                <div className="mt-4 flex justify-between">
+                <div className="mt-4 h-24 flex justify-between p-3">
                     <div>
                         <h3 className="text-sm text-gray-700">
                             <span href={dish.href}>
-                                <span aria-hidden="true" className="absolute inset-0" />
+                                <span aria-hidden="true" className="absolute inset-0 shadow-lg rounded-md " />
                                 {dish.name}
                             </span>
                         </h3>

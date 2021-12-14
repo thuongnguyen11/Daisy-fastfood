@@ -17,6 +17,7 @@ import Cart from "./pages/Cart";
 import OrderSummary from "./pages/OrderSumary";
 import Orders from "./pages/Orders";
 import OrderDetails from "./pages/OrderDetails";
+import Home from "./pages/Home";
 
 const App = () => {
   const { user } = useSelector((state) => state.auth);
@@ -46,7 +47,8 @@ const App = () => {
       <ToastContainer />
       <Header></Header>
       <Switch>
-        <Route exact path={['/', '/menu']} component={Menu} />
+        <Route exact path={'/'} component={Home} />
+        <Route exact path={'/menu'} component={Menu} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
 

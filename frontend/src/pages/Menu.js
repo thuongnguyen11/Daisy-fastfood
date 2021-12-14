@@ -38,6 +38,7 @@ export default function Menu() {
 
     return (
         <div className="bg-white">
+            
             {
                 groupedDishes.map(group =>
                     <DishCollection key={group.categoryId} title={group.category} loading={loading} dishes={group.dishes}></DishCollection>

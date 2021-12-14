@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import { getCart } from "../store/cart.store";
+import shipper from '../assets/shipper.png';
+import { scale } from "tailwindcss/defaultTheme";
 
 export default function OrderSummary() {
     const history = useHistory();
@@ -28,8 +30,11 @@ export default function OrderSummary() {
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="relative">
                     <img
-                        className="mx-auto h-8"
-                        src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg"
+                        className="mx-auto h-32 animate-pulse"
+                        style={{transform: [
+                            { scaleX: "-1" },
+                          ]}}
+                        src={shipper}
                         alt="Workcation"
                     />
 

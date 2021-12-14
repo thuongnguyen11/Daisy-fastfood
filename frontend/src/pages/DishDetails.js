@@ -82,15 +82,15 @@ export default function DisDetails() {
                 <div className="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
                     <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                         <img
-                            src={dish.images[1]}
-                            alt={dish.images[1]}
+                            src={dish.images[0]}
+                            alt={dish.images[0]}
                             className="w-full h-full object-center object-cover"
                         />
                     </div>
                     <div className="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
                         <img
-                            src={dish.images[1]}
-                            alt={dish.images[1]}
+                            src={dish.images[0]}
+                            alt={dish.images[0]}
                             className="w-full h-full object-center object-cover"
                         />
                     </div>
@@ -128,7 +128,7 @@ export default function DisDetails() {
                                 rows={4}
                                 onChange={(e) => setNote(e.target.value)}
                                 placeholder="Ví dụ: thêm tương, gói riêng, ..."
-                                className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                className="shadow-sm focus:ring-yellow-400 focus:border-yellow-400 block w-full sm:text-sm border-gray-300 rounded-md"
                                 defaultValue={note}
                             />
                         </div>
@@ -136,7 +136,7 @@ export default function DisDetails() {
                         <button
                             type="button"
                             onClick={onSubmit}
-                            className="mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            className="mt-10 w-full bg-yellow-400 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-gray-600 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
                         >
                             Thêm vào giỏ hàng
                         </button>

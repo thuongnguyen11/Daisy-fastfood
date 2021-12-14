@@ -313,7 +313,7 @@ export default function Cart() {
                                 <div className="mt-6 w-100 text-center ">
                                     <button
                                         type="submit"
-                                        className="px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-700 bg-yellow-400 hover:bg-yellow-500"
+                                        className="px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-gray-600 bg-yellow-400 hover:bg-yellow-500"
                                     >
                                         Tiến hành đặt hàng
                                     </button>
