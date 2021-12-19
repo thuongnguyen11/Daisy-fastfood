@@ -13,7 +13,9 @@ import { Link, useHistory } from "react-router-dom";
 
 import { classNames } from '../common/class-names';
 import { logout } from "../store/auth.store";
-import { getCart } from "../store/cart.store"
+import { getCart } from "../store/cart.store";
+import logo from "../assets/logo7.png";
+import Avatar from "../assets/avatar.png"
 
 const solutions = [
     {
@@ -38,8 +40,7 @@ const solutions = [
 ]
 const navigation = [
     { name: "Trang chủ", href: "/" },
-    { name: 'Menu', href: '/menu' },
-    { name: 'About us', href: '/xyz' },
+    { name: 'Thực đơn', href: '/menu' },
 ]
 
 export default function Header() {
@@ -65,13 +66,16 @@ export default function Header() {
             <header>
                 <Popover className="relative bg-yellow-400 z-20">
                     <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 sm:px-6 md:justify-between md:space-x-10 lg:px-8">
-                        <div className="flex justify-between">
+                        <div className="flex justify-between items-center">
                             <div className="flex  ">
                                 <a href="#">
                                     <img
-                                        className="h-8 w-auto sm:h-10"
-                                        src="./assets/—Pngtree—good food logo template design_5301333.png"
+                                        src={logo}
                                         alt="logo"
+                                        width={70}
+                                        height={70}
+                                        style={{marginBottom: -10, marginTop: -10}}
+                                        
                                     />
                                 </a>
                             </div>
@@ -97,7 +101,7 @@ export default function Header() {
                                                                     href={item.href}
                                                                     className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                                                                 >
-                                                                    <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white sm:h-12 sm:w-12">
+                                                                    <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-yellow-400 text-white sm:h-12 sm:w-12">
                                                                         <item.icon className="h-6 w-6" aria-hidden="true" />
                                                                     </div>
                                                                     <div className="ml-4">
@@ -115,7 +119,7 @@ export default function Header() {
                                 </Popover>
 
                                 {navigation.map((item) => (
-                                    <NavLink key={item.name} exact={true} activeClassName='border-b-2 border-bottom-green border-green-500' to={item.href} className="text-nav-color text-base font-medium text-gray-900">
+                                    <NavLink key={item.name} exact={true} activeClassName='border-b-2 border-bottom-green border-green-500' to={item.href} className="text-nav-color text-base font-medium text-gray-700">
                                         <span>{item.name}</span>
                                     </NavLink>
 
@@ -131,12 +135,12 @@ export default function Header() {
                                                 <span className="flex min-w-0 items-center justify-between space-x-3">
                                                     <img
                                                         className="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0"
-                                                        src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                                        alt=""
+                                                        src={Avatar}
+                                                        alt="avatar"
                                                     />
                                                     <span className="flex-1 flex flex-col min-w-0">
-                                                        <span className="text-gray-900 text-sm font-medium truncate">{user.userInfo.name}</span>
-                                                        <span className="text-white text-sm truncate">{user.userInfo.phone_number}</span>
+                                                        <span className="text-gray-700 text-sm font-medium truncate">{user.userInfo.name}</span>
+                                                        <span className="color_item_header text-sm truncate">{user.userInfo.phone_number}</span>
                                                     </span>
                                                 </span>
                                             </span>
@@ -171,13 +175,13 @@ export default function Header() {
                                     </Transition>
                                 </Menu>
 
-                                <div className="ml-4 flow-root lg:ml-6">
+                                <div className="ml-4 flow-root lg:ml-6 relative">
                                     <Link to="/cart" className={classNames(user ? 'group -m-2 p-2 flex items-center' : 'hidden')}>
                                         <ShoppingBagIcon
-                                            className="flex-shrink-0 h-6 w-6 text-white group-hover:text-gray-500"
+                                            className="flex-shrink-0 h-6 w-6 text-gray-600 group-hover:text-gray-500 "
                                             aria-hidden="true"
                                         />
-                                        <span className="ml-2 text-sm font-medium text-white group-hover:text-gray-800">{items.length}</span>
+                                        <span className="ml-2 text-sm font-medium  group-hover:text-gray-800 absolute -bottom-2 color_bag text-yellow-400 w-5 h-5 rounded-full left-2 text-center ">{items.length}</span>
                                         <span className="sr-only">items in cart, view bag</span>
                                     </Link>
                                 </div>
@@ -185,15 +189,15 @@ export default function Header() {
                             : <div className={classNames(!user ? 'ml-10 space-x-4' : 'hidden')}>
                                 <Link
                                     to='login'
-                                    className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
+                                    className="inline-block bg-yellow-400 py-2 px-4 border border-transparent rounded-md text-base font-medium text-gray-700 hover:bg-opacity-75"
                                 >
-                                    Sign in
+                                    Đăng nhập
                                 </Link>
                                 <Link
                                     to='register'
-                                    className="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50"
+                                    className="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-gray-700 hover:bg-indigo-50"
                                 >
-                                    Sign up
+                                    Đăng ký
                                 </Link>
                             </div>
                         }
@@ -232,7 +236,7 @@ export default function Header() {
                                                     href={item.href}
                                                     className="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50"
                                                 >
-                                                    <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                                                    <div className="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-yellow-400 text-white">
                                                         <item.icon className="h-6 w-6" aria-hidden="true" />
                                                     </div>
                                                     <div className="ml-4 text-base font-medium text-gray-900">{item.name}</div>
@@ -260,7 +264,7 @@ export default function Header() {
                                             <div className="mt-6">
                                                 <a
                                                     href="#"
-                                                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                                                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-400 hover:bg-yellow-500"
                                                 >
                                                     Sign up
                                                 </a>

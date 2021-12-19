@@ -11,6 +11,9 @@ module.exports = {
         cyan: colors.cyan,
         rose: colors.rose,
       },
+      spacing: {
+        section: '35rem',
+      }
     },
   },
   variants: {

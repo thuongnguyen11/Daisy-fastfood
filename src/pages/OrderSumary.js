@@ -4,6 +4,8 @@ import { useHistory } from "react-router-dom";
 import { getCart } from "../store/cart.store";
 import shipper from '../assets/shipper.png';
 import { scale } from "tailwindcss/defaultTheme";
+import Background from "../assets/background.png";
+
 
 export default function OrderSummary() {
     const history = useHistory();
@@ -26,17 +28,18 @@ export default function OrderSummary() {
 
 
     return (
-        <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24 h-full">
+        <section className="py-12 bg-yellow-50 overflow-hidden md:py-20 lg:py-24 h-full " style={{ backgroundImage: `url(${Background})` }}>
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="relative">
-                    <img
-                        className="mx-auto h-32 animate-pulse"
-                        style={{transform: [
-                            { scaleX: "-1" },
-                          ]}}
-                        src={shipper}
-                        alt="Workcation"
-                    />
+                    <div style={{
+                        transform: 'scaleX(-1)'
+                    }}>
+                        <img
+                            className="mx-auto h-32 animate__animated animate__bounceOutLeft animate__infinite animate__slower"
+                            src={shipper}
+                            alt="Workcation"
+                        />
+                    </div>
 
                     <div className="mt-8 text-center w-full flex justify-center text-green-500 animate-bounce">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,7 +48,7 @@ export default function OrderSummary() {
                     </div>
 
                     <blockquote className="mt-4">
-                        <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+                        <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium color-text3">
                             <p>
                                 Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi.
                             </p>
@@ -57,7 +60,7 @@ export default function OrderSummary() {
                         <footer className="mt-8">
                             <div className="md:flex md:items-center md:justify-center">
                                 <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                                    <div className="text-base font-medium text-gray-900">Chúc quý khách ngon miệng! </div>
+                                    <div className="text-base font-medium text-green-700">Chúc quý khách ngon miệng! </div>
 
                                     <span className="ml-2 text-red-600">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

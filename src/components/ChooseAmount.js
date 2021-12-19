@@ -24,7 +24,7 @@ export default function ChooseAmount({ type = 'small' | 'normal', initialValue, 
             </svg>
         </button>
         <input className={
-            'border rounded mx-2 text-lg text-gray-900 w-3/12 text-center focus:outline-none amount ' +
+            'shadow-none outline-none rounded mx-2 text-lg text-gray-900 w-3/12 text-center focus:border focus:outline-none focus:shadow-none focus:border-yellow-300 amount ' +
             (type === 'small' ? 'py-1 w-3/12' : 'w-4/12 py-2')
         }
             value={amount} type="number" readOnly

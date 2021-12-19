@@ -12,7 +12,7 @@ export default function DishItem({ dish }) {
                         className="w-full h-full object-center object-cover lg:w-full lg:h-full"
                     />
                 </div>
-                <div className="mt-4 h-24 flex justify-between p-3">
+                <div className="mt-4 h-16 flex justify-between p-3">
                     <div>
                         <h3 className="text-sm text-gray-700">
                             <span href={dish.href}>

@@ -71,7 +71,7 @@ const CartItem = ({ item, onUpdateItem }) => {
 
                     <div className="flex">
                         <button type="button" className="font-medium text-yellow-500 hover:text-yellow-400" onClick={() => onRemoveItem()}>
-                            Remove
+                            Xoá
                         </button>
                     </div>
 
