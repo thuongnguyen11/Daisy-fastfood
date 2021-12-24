@@ -13,6 +13,7 @@ module.exports = {
       },
       spacing: {
         section: '35rem',
+        banner: '30rem',
       }
     },
   },

@@ -86,7 +86,7 @@ const CartItem = ({ item, onUpdateItem }) => {
                 placeholder="ví dụ: Thêm tương ớt"
                 defaultValue={item.note}
                 onChange={(e) => onNoteChange(e.target.value)}
-                className="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"
+                className="block w-full shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm border-gray-300 rounded-md"
             ></textarea>
         </div>
 
@@ -216,7 +216,7 @@ export default function Cart() {
                                             <div>
                                                 <input type="text" placeholder="Nguyễn Văn A" {...field}
                                                     className={
-                                                        "block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md" + (meta.touched && meta.error ? ' border-2 border-red-500' : '')
+                                                        "block w-full shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm border-gray-300 rounded-md" + (meta.touched && meta.error ? ' border-2 border-red-500' : '')
                                                     } />
                                                 {meta.touched && meta.error && (
                                                     <div className="text-sm text-red-500 mt-1">{meta.error}</div>
@@ -241,7 +241,7 @@ export default function Cart() {
                                             <div>
                                                 <input type="text" placeholder="0968.xxx.xxxx" {...field}
                                                     className={
-                                                        "block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md" + (meta.touched && meta.error ? ' border-2 border-red-500' : '')
+                                                        "block w-full shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm border-gray-300 rounded-md" + (meta.touched && meta.error ? ' border-2 border-red-500' : '')
                                                     } />
                                                 {meta.touched && meta.error && (
                                                     <div className="text-sm text-red-500 mt-1">{meta.error}</div>
@@ -267,7 +267,7 @@ export default function Cart() {
                                                 <div>
                                                     <textarea cols={3} placeholder="ví dụ: 160 Phan Huy Ích, P12, Gò Vấp" {...field}
                                                         className={
-                                                            "block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md" + (meta.touched && meta.error ? ' border-2 border-red-500' : '')
+                                                            "block w-full shadow-sm focus:ring-yellow-400 focus:border-yellow-400 sm:text-sm border-gray-300 rounded-md" + (meta.touched && meta.error ? ' border-2 border-red-500' : '')
                                                         } />
                                                     {meta.touched && meta.error && (
                                                         <div className="text-sm text-red-500 mt-1">{meta.error}</div>

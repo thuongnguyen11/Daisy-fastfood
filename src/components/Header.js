@@ -68,7 +68,7 @@ export default function Header() {
                     <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-4 sm:px-6 md:justify-between md:space-x-10 lg:px-8">
                         <div className="flex justify-between items-center">
                             <div className="flex  ">
-                                <a href="#">
+                                <Link to='/'>
                                     <img
                                         src={logo}
                                         alt="logo"
@@ -77,7 +77,7 @@ export default function Header() {
                                         style={{marginBottom: -10, marginTop: -10}}
                                         
                                     />
-                                </a>
+                                </Link>
                             </div>
                             <Popover.Group as="nav" className="hidden md:flex space-x-10">
                                 <Popover className="relative">

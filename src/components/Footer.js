@@ -1,7 +1,7 @@
 const navigation = [
     {
         name: 'Facebook',
-        href: '#',
+        href: 'https://www.facebook.com/hoaithuongit2511',
         icon: (props) => (
             <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                 <path
@@ -75,7 +75,7 @@ export default function Footer() {
                     ))}
                 </div>
                 <div className="mt-8 md:mt-0 md:order-1">
-                    <p className="text-center text-base text-gray-800">&copy; 2020 Workflow, Inc. All rights reserved.</p>
+                    <p className="text-center text-base text-gray-800">&copy; Cửa hàng đồ ăn nhanh DaisyFood.</p>
                 </div>
             </div>
         </footer>
